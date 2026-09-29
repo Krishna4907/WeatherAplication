@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Search -->
+    <form class="search" id="search-form">
+      <input type="text" id="city-input" placeholder="Search for a city" autocomplete="off">
+      <button type="submit" id="search-btn">Search</button>
+    </form>
+
+    <!-- Error / status message (hidden by default) -->
+    <p class="message hidden" id="message"></p>
+
+    <!-- Current weather -->
+    <section class="current" id="current">
+      <h1 class="city" id="city">City name</h1>
+      <p class="date" id="date">Day, Date</p>
+
+      <img class="icon" id="icon" src="" alt="Weather icon">
+      <p class="temp" id="temp">--°</p>
+      <p class="condition" id="condition">Condition</p>
+    </section>
+
+    <!-- Extra details -->
+    <section class="details">
+      <div class="detail">
+        <span class="detail-value" id="feels-like">--°</span>
+        <span class="detail-label">Feels like</span>
+      </div>
+      <div class="detail">
+        <span class="detail-value" id="humidity">--%</span>
+        <span class="detail-label">Humidity</span>
+      </div>
+      <div class="detail">
+        <span class="detail-value" id="wind">-- km/h</span>
+        <span class="detail-label">Wind</span>
+      </div>
+    </section>
+
+    <!-- Forecast -->
+    <section class="forecast">
+      <h2>Next days</h2>
+      <ul class="forecast-list" id="forecast-list">
+        <!-- Repeat this <li> for each day (or generate them with JS) -->
+        <li class="forecast-day">
+          <span class="forecast-name">Mon</span>
+          <img class="forecast-icon" src="" alt="">
+          <span class="forecast-temp">--°</span>
+        </li>
+        <li class="forecast-day">
+          <span class="forecast-name">Tue</span>
+          <img class="forecast-icon" src="" alt="">
+          <span class="forecast-temp">--°</span>
+        </li>
+        <li class="forecast-day">
+          <span class="forecast-name">Wed</span>
+          <img class="forecast-icon" src="" alt="">
+          <span class="forecast-temp">--°</span>
+        </li>
+        <li class="forecast-day">
+          <span class="forecast-name">Thu</span>
+          <img class="forecast-icon" src="" alt="">
+          <span class="forecast-temp">--°</span>
+        </li>
+        <li class="forecast-day">
+          <span class="forecast-name">Fri</span>
+          <img class="forecast-icon" src="" alt="">
+          <span class="forecast-temp">--°</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Your JavaScript goes here -->
+  <script src="script.js"></script>
+</body>
+</html>

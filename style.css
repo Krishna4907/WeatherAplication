@@ -1,0 +1,205 @@
+/* ---------- Reset & variables ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #dbe9f4;
+  --card: #ffffff;
+  --text: #16324a;
+  --muted: #5f7a90;
+  --accent: #2f7fc1;
+  --radius: 20px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---------- App container ---------- */
+.app {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(22, 50, 74, 0.12);
+}
+
+/* ---------- Search ---------- */
+.search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #d3e0ea;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.search button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background: #266aa3;
+}
+
+.search button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* ---------- Message (errors, loading) ---------- */
+.message {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fdeaea;
+  color: #a12d2d;
+  font-size: 0.95rem;
+}
+
+/* Toggle this class from JS to show/hide things */
+.hidden {
+  display: none;
+}
+
+/* ---------- Current weather ---------- */
+.current {
+  text-align: center;
+  padding: 12px 0 20px;
+}
+
+.city {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.date {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.icon {
+  width: 110px;
+  height: 110px;
+  margin-top: 8px;
+}
+
+.temp {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.condition {
+  margin-top: 6px;
+  font-size: 1.15rem;
+  color: var(--muted);
+  text-transform: capitalize;
+}
+
+/* ---------- Details ---------- */
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 16px 0;
+  border-top: 1px solid #e3ebf1;
+  border-bottom: 1px solid #e3ebf1;
+  text-align: center;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- Forecast ---------- */
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast h2 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.forecast-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  border-radius: 14px;
+  background: #f0f6fb;
+}
+
+.forecast-name {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.forecast-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.forecast-temp {
+  font-weight: 600;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 380px) {
+  .temp {
+    font-size: 3.5rem;
+  }
+
+  .forecast-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
